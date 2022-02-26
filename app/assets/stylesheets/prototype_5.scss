@@ -1,0 +1,18 @@
+.prototype_5 {
+  display: flex;
+  margin: auto;
+}
+
+.frame {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  margin: auto;
+  background: black;
+  //   overflow: hidden;
+}
+
+.circle {
+  position: relative;
+  border-radius: 50%;
+}
