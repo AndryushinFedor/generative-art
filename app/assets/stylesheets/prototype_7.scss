@@ -5,11 +5,53 @@
 
 .frame {
   position: relative;
-  width: 800px;
-  height: 800px;
+  width: 900px;
+  height: 900px;
   margin: auto;
-  background: black;
+  background: rgb(187, 187, 187);
   overflow: hidden;
+}
+
+.hat {
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 70px);
+}
+
+.eyeBrows {
+  position: absolute;
+  top: 5%;
+  left: calc(50% - 55px);
+}
+
+.eyes {
+  position: absolute;
+  top: 20%;
+  left: calc(50% - 75px);
+}
+
+.nose {
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 40px);
+}
+
+.mouth {
+  position: absolute;
+  bottom: 20%;
+  left: calc(50% - 40px);
+}
+
+.itemRight {
+  position: absolute;
+  bottom: 20%;
+  right: -60px;
+}
+
+.itemLeft {
+  position: absolute;
+  bottom: 20%;
+  left: -60px;
 }
 
 .circle {
@@ -159,9 +201,5 @@
 
   &.ch36 {
     background-image: image-url("ch36.svg");
-  }
-
-  &.ch37 {
-    background-image: image-url("ch37.svg");
   }
 }

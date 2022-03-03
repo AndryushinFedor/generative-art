@@ -2,7 +2,7 @@ const colors = ['#F26DF8', '#FF5C00', '#FFE500', '#00FF29', '#00FFF0', '#4B3BFF'
 const particlesQuantity = [6, 7, 8, 9]
 
 
-const circleTypes = [
+const circleTypes = [ 
     ['ch1',     210, 220,  2, 4],
     ['ch2',     210, 220,  2, 4],
     ['ch3',     210, 220,  2, 4],
