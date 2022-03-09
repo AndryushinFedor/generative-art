@@ -67,25 +67,25 @@ const circleTypes = [
     console.log('changed')
   }
   
-  function createCircle(frame) {
+  function createCircle(frame, i) {
     const circleElement = document.createElement('div')
     const circleType = sample(circleTypes)
     circleElement.classList.add('circle')
     
-   let cell = Math.floor(
-    getRandomArbitrary(0,8)
-  )
+//    let cell = Math.floor(
+//     getRandomArbitrary(0,8)
+//   )
 
-  while (occupated.includes(cell)) {
-    cell = Math.floor(
-        getRandomArbitrary(0,8)
-      )
-  }
+//   while (occupated.includes(cell)) {
+//     cell = Math.floor(
+//         getRandomArbitrary(0,8)
+//       )
+//   }
   
-  occupated.push(cell)
+//   occupated.push(cell)
   
-    const top = positionCell[cell][1] + getRandomArbitrary(0, 100)
-    const left = positionCell[cell][0] + getRandomArbitrary(0, 100)
+    const top = positionCell[i][1] + getRandomArbitrary(0, 50)
+    const left = positionCell[i][0] + getRandomArbitrary(0, 50)
     const size = getRandomArbitrary(circleType[1], circleType[2])
   
     circleElement.style.top = [top, 'px'].join('')
@@ -106,7 +106,7 @@ const circleTypes = [
     createHat(circleElement)
     createNose(circleElement)
     createItem(circleElement)
-    circleElement.style.transform = `rotate(${getRandomArbitrary(10, 350)}deg)`
+    //circleElement.style.transform = `rotate(${getRandomArbitrary(10, 350)}deg)`
 
   }
 
@@ -127,7 +127,7 @@ const circleTypes = [
         case number<crit:
           return 1
 
-        case number<crit2:
+        case number<(crit + crit2):
             return 2
     
         default:
@@ -136,10 +136,10 @@ const circleTypes = [
 }
 
   function createHat(circleElement) {
-    if (randomChance(20) == 1) {
+    if (randomChance(10) == 1) {
         const hat = document.createElement('img')
     
-        hat.setAttribute('src', `/assets/hat${Math.floor(getRandomArbitrary(1,3))}.svg`)
+        hat.setAttribute('src', `/assets/hat${Math.floor(getRandomArbitrary(1,10))}.svg`)
         hat.classList.add('hat')
         circleElement.appendChild(hat)
     }
@@ -148,7 +148,7 @@ const circleTypes = [
   function createEyeBrows(circleElement) {
     const eyeBrows = document.createElement('img')
     
-    eyeBrows.setAttribute('src', `/assets/eyebrows${Math.floor(getRandomArbitrary(1,3))}.svg`)
+    eyeBrows.setAttribute('src', `/assets/eyebrows${Math.floor(getRandomArbitrary(1,13))}.svg`)
     eyeBrows.classList.add('eyeBrows')
   
     circleElement.appendChild(eyeBrows)
@@ -157,7 +157,7 @@ const circleTypes = [
   function createEyes(circleElement) {
       const eyes = document.createElement('img')
       
-      eyes.setAttribute('src', `/assets/eye${Math.floor(getRandomArbitrary(1,3))}.svg`)
+      eyes.setAttribute('src', `/assets/eye${Math.floor(getRandomArbitrary(1,35))}.svg`)
       eyes.classList.add('eyes')
     
       circleElement.appendChild(eyes)
@@ -167,7 +167,7 @@ const circleTypes = [
     if (randomChance(15) == 1) {
         const nose = document.createElement('img')
     
-        nose.setAttribute('src', `/assets/nose${Math.floor(getRandomArbitrary(1,3))}.svg`)
+        nose.setAttribute('src', `/assets/nose${Math.floor(getRandomArbitrary(1,9))}.svg`)
         nose.classList.add('nose')
         circleElement.appendChild(nose)
     }
@@ -176,18 +176,18 @@ const circleTypes = [
   function createMouth(circleElement) {
     const mouth = document.createElement('img')
     
-    mouth.setAttribute('src', `/assets/mouth${Math.floor(getRandomArbitrary(1,3))}.svg`)
+    mouth.setAttribute('src', `/assets/mouth${Math.floor(getRandomArbitrary(1,31))}.svg`)
     mouth.classList.add('mouth')
   
     circleElement.appendChild(mouth)
 }
 
 function createItem(circleElement) {
-    let chance = randomChance2(10,20)
+    let chance = randomChance2(5,5)
     if (chance == 1) {
         const item = document.createElement('img')
     
-        item.setAttribute('src', `/assets/itemLeft${Math.floor(getRandomArbitrary(1,3))}.svg`)
+        item.setAttribute('src', `/assets/itemLeft${Math.floor(getRandomArbitrary(1,4))}.svg`)
         item.classList.add('itemLeft')
         circleElement.appendChild(item)
     }
@@ -195,7 +195,7 @@ function createItem(circleElement) {
     else if (chance == 2){
         const item = document.createElement('img')
     
-        item.setAttribute('src', `/assets/itemRight${Math.floor(getRandomArbitrary(1,3))}.svg`)
+        item.setAttribute('src', `/assets/itemRight${Math.floor(getRandomArbitrary(1,5))}.svg`)
         item.classList.add('itemRight')
         circleElement.appendChild(item)
     }
@@ -212,7 +212,7 @@ function createItem(circleElement) {
     
 
       for (var i = 0; i < 9; i++) {
-        createCircle(frame)
+        createCircle(frame, i)
       }
     
   })
