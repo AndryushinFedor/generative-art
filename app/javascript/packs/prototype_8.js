@@ -107,7 +107,7 @@ const circleTypes = [
       createHat(circleElement)
       createNose(circleElement)
       createItem(circleElement)
-      //circleElement.style.transform = `rotate(${getRandomArbitrary(10, 350)}deg)`
+      circleElement.style.transform = `rotate(${getRandomArbitrary(-20, 20)}deg)`
     }
   
 console.log('while')
