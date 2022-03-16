@@ -2,7 +2,7 @@ const colors = ['#F26DF8', '#FF5C00', '#FFE500', '#00FF29', '#00FFF0', '#4B3BFF'
 const numFaces = 5000
 const sizeMin = 110
 const sizeMax = 190
-const frameW = 1100
+const frameW = 1000
 const frameH = 700
 let n
  
@@ -135,7 +135,7 @@ let occupated = []
         changeSVGColor(circleElement, sample(colors))
 
       
-      circleElement.style.transform = `rotate(${getRandomArbitrary(-10, 10)}deg)`
+      circleElement.style.transform = `rotate(${getRandomArbitrary(-15, 15)}deg)`
     }
   }
 
