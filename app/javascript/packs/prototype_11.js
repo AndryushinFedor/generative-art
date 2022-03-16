@@ -165,7 +165,7 @@ let occupated = []
 }
 
   function createHat(circleElement) {
-    if (randomChance(80) == 1) {
+    if (randomChance(20) == 1) {
         const hat = document.createElement('img')
     
         hat.setAttribute('src', `/assets/hat${Math.floor(getRandomArbitrary(1,10))}.svg`)
